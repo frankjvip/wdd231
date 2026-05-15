@@ -1,0 +1,99 @@
+/* small.css → estilos base para pantallas pequeñas (mobile-first) */
+
+/* Fuente global */
+body {
+  font-family: 'Roboto', sans-serif; /* ejemplo con Google Fonts */
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #004466; /* tu color principal */
+  color: white;
+}
+
+header img {
+  height: 40px;
+}
+
+header span {
+  font-weight: bold;
+}
+
+#menuBtn {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Nav oculto en móviles */
+nav {
+  display: none;
+  flex-direction: column;
+  background-color: #006699;
+}
+
+nav.open {
+  display: flex;
+}
+
+nav a {
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #004466;
+}
+
+/* Main */
+main {
+  padding: 1rem;
+}
+
+h1, h2 {
+  color: #004466;
+}
+
+/* Course cards */
+.course {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  background-color: #fff;
+}
+
+.course.completed {
+  background-color: #d9f2d9; /* verde suave para cursos completados */
+  border-color: #66bb66;
+}
+
+/* Footer */
+footer {
+  background-color: #004466;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer a {
+  color: #ffcc00;
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
