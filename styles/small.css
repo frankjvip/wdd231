@@ -1,8 +1,5 @@
-/* small.css → estilos base para pantallas pequeñas (mobile-first) */
-
-/* Fuente global */
 body {
-  font-family: 'Roboto', sans-serif; /* ejemplo con Google Fonts */
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.5;
@@ -16,7 +13,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: #004466; /* tu color principal */
+  background-color: #004466;
   color: white;
 }
 
@@ -36,7 +33,7 @@ header span {
   cursor: pointer;
 }
 
-/* Nav oculto en móviles */
+/* Nav */
 nav {
   display: none;
   flex-direction: column;
@@ -54,7 +51,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #004466;
+  background-color: #003355;
 }
 
 /* Main */
@@ -76,7 +73,7 @@ h1, h2 {
 }
 
 .course.completed {
-  background-color: #d9f2d9; /* verde suave para cursos completados */
+  background-color: #d9f2d9;
   border-color: #66bb66;
 }
 
@@ -97,3 +94,4 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+

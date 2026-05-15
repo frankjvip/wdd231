@@ -1,4 +1,4 @@
-// course.js → cursos del certificado Web and Computer Programming
+
 
 const courses = [
   { code: "WDD130", name: "Web Fundamentals", credits: 3, type: "WDD", completed: true },
@@ -11,7 +11,6 @@ const courses = [
   { code: "CSE180", name: "Web Backend Development", credits: 3, type: "CSE", completed: false }
 ];
 
-// Función para mostrar cursos dinámicamente
 function displayCourses(list) {
   const container = document.getElementById("courseCards");
   container.innerHTML = "";
@@ -27,16 +26,16 @@ function displayCourses(list) {
     container.appendChild(card);
   });
 
-  // Total de créditos dinámico
+ 
   const total = list.reduce((sum, c) => sum + c.credits, 0);
   document.getElementById("totalCredits").textContent = total;
 }
 
-// Botones de filtro
+
 document.getElementById("allBtn").addEventListener("click", () => displayCourses(courses));
 document.getElementById("wddBtn").addEventListener("click", () => displayCourses(courses.filter(c => c.type === "WDD")));
 document.getElementById("cseBtn").addEventListener("click", () => displayCourses(courses.filter(c => c.type === "CSE")));
 
-// Mostrar todos al cargar
+
 displayCourses(courses);
 

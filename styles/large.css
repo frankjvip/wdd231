@@ -1,12 +1,8 @@
-/* large.css → estilos para pantallas grandes */
-
 @media (min-width: 640px) {
-  /* Header */
   header {
     padding: 1rem 2rem;
   }
 
-  /* Nav horizontal */
   nav {
     display: flex;
     flex-direction: row;
@@ -15,14 +11,13 @@
   }
 
   #menuBtn {
-    display: none; /* ocultar hamburguesa */
+    display: none;
   }
 
   nav a {
     padding: 0.5rem 1rem;
   }
 
-  /* Main layout */
   main {
     max-width: 1200px;
     margin: 0 auto;
@@ -35,14 +30,12 @@
     margin-bottom: 2rem;
   }
 
-  /* Course cards en grid */
   #courseCards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 1rem;
   }
 
-  /* Footer */
   footer {
     display: flex;
     justify-content: space-between;
@@ -50,3 +43,4 @@
     flex-wrap: wrap;
   }
 }
+
