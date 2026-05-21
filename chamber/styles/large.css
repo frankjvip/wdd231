@@ -1,0 +1,11 @@
+@media (min-width: 32rem) {
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
