@@ -1,9 +1,11 @@
+/* Reset básico */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
+/* Header y Footer */
 header, footer {
   background: #004466;
   color: white;
@@ -25,6 +27,7 @@ nav a {
   text-decoration: none;
 }
 
+/* Botones de vista */
 .view-buttons {
   text-align: center;
   margin: 1rem;
@@ -33,20 +36,42 @@ nav a {
 button {
   margin: 0.5rem;
   padding: 0.5rem 1rem;
+  cursor: pointer;
 }
 
+/* Grid por defecto */
 .grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
 }
 
-.list {
-  display: block;
+/* List View */
+.list .card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
 }
 
+.list img {
+  max-width: 80px;
+  height: auto;
+  margin: 0;
+}
+
+/* Tarjetas */
 .card {
   border: 1px solid #ccc;
   padding: 1rem;
   text-align: center;
+}
+
+.card img {
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem;
 }

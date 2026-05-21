@@ -5,7 +5,15 @@
     gap: 1rem;
   }
 
+  /* Grid en pantallas grandes */
   .grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  /* List View en pantallas grandes */
+  .list .card {
+    flex-direction: row;
+    justify-content: flex-start;
   }
 }
