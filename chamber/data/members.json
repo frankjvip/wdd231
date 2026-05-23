@@ -4,7 +4,7 @@
     "address": "123 Main St",
     "phone": "504-111-2222",
     "website": "https://techsolutions.com",
-    "image": "tech.png",
+    "image": "tech-small.png",
     "membership": 3
   },
   {
@@ -12,7 +12,7 @@
     "address": "456 Fitness Ave",
     "phone": "504-333-4444",
     "website": "https://healthylife.com",
-    "image": "gym.png",
+    "image": "gym-small.png",
     "membership": 2
   },
   {
@@ -20,7 +20,7 @@
     "address": "789 Fresh Rd",
     "phone": "504-555-6666",
     "website": "https://greenmarket.com",
-    "image": "market.png",
+    "image": "market-small.png",
     "membership": 1
   },
   {
@@ -28,7 +28,7 @@
     "address": "101 Money Blvd",
     "phone": "504-777-8888",
     "website": "https://smartfinance.com",
-    "image": "finance.png",
+    "image": "finance-small.png",
     "membership": 2
   },
   {
@@ -36,7 +36,7 @@
     "address": "202 Education St",
     "phone": "504-999-0000",
     "website": "https://brightschool.com",
-    "image": "school.png",
+    "image": "school-small.png",
     "membership": 3
   },
   {
@@ -44,7 +44,7 @@
     "address": "303 Car Ln",
     "phone": "504-121-2121",
     "website": "https://autofix.com",
-    "image": "garage.png",
+    "image": "garage-small.png",
     "membership": 1
   },
   {
@@ -52,7 +52,7 @@
     "address": "404 Art Ave",
     "phone": "504-343-4343",
     "website": "https://creativestudio.com",
-    "image": "studio.png",
+    "image": "studio-small.png",
     "membership": 2
   }
 ]

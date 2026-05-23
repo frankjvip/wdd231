@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Santa Lucía Chamber of Commerce</title>
+  <meta name="description" content="Welcome to the Santa Lucía Chamber of Commerce.">
+  <meta name="author" content="Franklin Rivas">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Santa Lucía Chamber of Commerce">
+  <meta property="og:description" content="Connecting businesses and community in Santa Lucía.">
+  <meta property="og:image" content="images/og-image.png">
+  <meta property="og:url" content="https://frankjvip.github.io/chamber/index.html">
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+</head>
+<body>
+  <header>
+    <h1>Santa Lucía Chamber of Commerce</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <img src="images/hero.jpg" alt="Panoramic view of Santa Lucía">
+      <div class="cta">
+        <a href="join.html" class="btn">Join the Chamber</a>
+      </div>
+    </section>
+
+    <!-- Events -->
+    <section class="events">
+      <h2>Current Events</h2>
+      <p>📅 Business Fair - May 25</p>
+      <p>📅 Digital Marketing Workshop - May 30</p>
+    </section>
+
+    <!-- Weather -->
+    <section class="weather">
+      <h2>Weather in Santa Lucía</h2>
+      <div id="current-weather"></div>
+      <div id="forecast"></div>
+    </section>
+
+    <!-- Spotlights -->
+    <section class="spotlights">
+      <h2>Featured Businesses</h2>
+      <div id="spotlight-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Santa Lucía Chamber of Commerce</p>
+    <p>WDD 231 | Franklin Rivas</p>
+    <p>Last modification: <span id="lastModified"></span></p>
+  </footer>
+
+  <!-- JS -->
+  <script src="scripts/weather.js"></script>
+  <script src="scripts/spotlights.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+</html>

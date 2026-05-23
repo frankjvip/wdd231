@@ -1,19 +1,50 @@
-@media (min-width: 32rem) {
-  nav ul {
+/* large.css → styles for larger screens (desktop and tablets) */
+
+@media (min-width: 768px) {
+  /* Header layout */
+  header {
     display: flex;
-    justify-content: center;
-    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
   }
 
-  /* Grid en pantallas grandes */
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-  }
-
-  /* List View en pantallas grandes */
-  .list .card {
+  nav ul {
     flex-direction: row;
-    justify-content: flex-start;
+    gap: 1rem;
+    margin: 0;
+  }
+
+  /* Hero image adjustments */
+  .hero img {
+    max-height: 400px;
+    object-fit: cover;
+  }
+
+  /* Main content layout */
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+
+  section {
+    margin-bottom: 2rem;
+  }
+
+  /* Spotlights grid */
+  .spotlights {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Footer layout */
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
   }
 }

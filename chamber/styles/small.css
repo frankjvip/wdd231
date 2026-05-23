@@ -1,77 +1,115 @@
-/* Reset básico */
+/* small.css → base styles for mobile-first design (small screens) */
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
+  line-height: 1.5;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
-/* Header y Footer */
-header, footer {
-  background: #004466;
+/* Header */
+header {
+  background-color: #004466;
   color: white;
   padding: 1rem;
   text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
-}
-
-nav ul li {
-  margin: 0.5rem 0;
+  margin: 0.5rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 nav a {
   color: white;
   text-decoration: none;
+  font-weight: bold;
 }
 
-/* Botones de vista */
-.view-buttons {
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
   text-align: center;
-  margin: 1rem;
 }
 
-button {
-  margin: 0.5rem;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-}
-
-/* Grid por defecto */
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-}
-
-/* List View */
-.list .card {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  text-align: left;
-  border: 1px solid #ccc;
-  padding: 0.5rem;
-}
-
-.list img {
-  max-width: 80px;
+.hero img {
+  width: 100%;
   height: auto;
-  margin: 0;
 }
 
-/* Tarjetas */
-.card {
+.cta {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cta .btn {
+  background: #0066cc;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* General sections */
+section {
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  color: #004466;
+  margin-top: 0;
+}
+
+/* Spotlights */
+.spotlights {
+  display: grid;
+  gap: 1rem;
+}
+
+.spotlights .card {
   border: 1px solid #ccc;
   padding: 1rem;
   text-align: center;
+  background-color: #fafafa;
+  border-radius: 6px;
 }
 
-.card img {
+.spotlights img {
   max-width: 150px;
   height: auto;
-  display: block;
-  margin: 0 auto 1rem;
+  margin: 0 auto 0.5rem auto;
+}
+
+/* Footer */
+footer {
+  background-color: #004466;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer p {
+  margin: 0.3rem 0;
 }

@@ -3,7 +3,7 @@ async function loadMembers() {
   const members = await response.json();
   const container = document.getElementById("members");
 
-  container.innerHTML = ""; // limpiar antes de cargar
+  container.innerHTML = ""; 
 
   members.forEach(member => {
     const card = document.createElement("div");
