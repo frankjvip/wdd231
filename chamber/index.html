@@ -3,36 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Santa Lucía Chamber of Commerce</title>
-  <meta name="description" content="Welcome to the Santa Lucía Chamber of Commerce.">
+
+  <!-- Meta tags -->
   <meta name="author" content="Franklin Rivas">
+  <meta name="description" content="Welcome to the Santa Lucía Chamber of Commerce, connecting local businesses and the community with opportunities, events, and growth.">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Santa Lucía Chamber of Commerce">
-  <meta property="og:description" content="Connecting businesses and community in Santa Lucía.">
-  <meta property="og:image" content="images/og-image.png">
-  <meta property="og:url" content="https://frankjvip.github.io/chamber/index.html">
+  <meta property="og:description" content="Connecting businesses and community in Santa Lucía with opportunities, events, and growth.">
+  <meta property="og:image" content="https://frankjvip.github.io/wdd231/images/og-image.png">
 
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/large.css">
+
+  
+  <script src="scripts/weather.js" defer></script>
+  <script src="scripts/spotlights.js" defer></script>
+
+  <title>Santa Lucía Chamber of Commerce</title>
 </head>
 <body>
   <header>
-    <h1>Santa Lucía Chamber of Commerce</h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="directory.html">Directory</a></li>
-        <li><a href="join.html">Join</a></li>
+        <li><a href="chamber/index.html">Chamber</a></li>
+        <li><a href="final/index.html">Final Project</a></li>
+        <li><a href="https://github.com/frankjvip">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/franklin-rivas">LinkedIn</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <!-- Hero -->
+    <h1>Santa Lucía Chamber of Commerce</h1>
+
+    <!-- Hero Section -->
     <section class="hero">
       <img src="images/hero.jpg" alt="Panoramic view of Santa Lucía">
       <div class="cta">
@@ -40,39 +55,30 @@
       </div>
     </section>
 
-    <!-- Events -->
-    <section class="events">
-      <h2>Current Events</h2>
-      <p>📅 Business Fair - May 25</p>
-      <p>📅 Digital Marketing Workshop - May 30</p>
+    <!-- Events Section -->
+    <section id="events">
+      <h2>Upcoming Events</h2>
+      <p>Stay tuned for local business events and community activities.</p>
     </section>
 
-    <!-- Weather -->
-    <section class="weather">
-      <h2>Weather in Santa Lucía</h2>
-      <div id="current-weather"></div>
+    <!-- Weather Section -->
+    <section id="weather">
+      <h2>Current Weather</h2>
+      <div id="weather-info"></div>
       <div id="forecast"></div>
     </section>
 
-    <!-- Spotlights -->
-    <section class="spotlights">
-      <h2>Featured Businesses</h2>
+    <!-- Spotlights Section -->
+    <section id="spotlights">
+      <h2>Member Spotlights</h2>
       <div id="spotlight-container"></div>
     </section>
   </main>
 
   <footer>
     <p>&copy; <span id="year"></span> Santa Lucía Chamber of Commerce</p>
-    <p>WDD 231 | Franklin Rivas</p>
-    <p>Last modification: <span id="lastModified"></span></p>
+    <p>Last Modified: <span id="lastModified"></span></p>
   </footer>
-
-  <!-- JS -->
-  <script src="scripts/weather.js"></script>
-  <script src="scripts/spotlights.js"></script>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-    document.getElementById("lastModified").textContent = document.lastModified;
-  </script>
 </body>
 </html>
+
