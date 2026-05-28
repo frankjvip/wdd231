@@ -1,7 +1,9 @@
+/* Base styles - Mobile First */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
 }
 
 header {
@@ -10,6 +12,29 @@ header {
   padding: 10px;
 }
 
+/* Home navigation */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background: #004080;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px;
+  display: block;
+}
+
+nav ul li a.active {
+  font-weight: bold;
+  border-bottom: 2px solid yellow;
+}
+
+/* Directory navigation */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -18,7 +43,7 @@ header {
 
 .nav-links {
   list-style: none;
-  display: none; /* oculto en móvil */
+  display: none;
   flex-direction: column;
   background: #004080;
   position: absolute;
@@ -49,17 +74,45 @@ header {
   display: flex;
 }
 
-main {
-  padding: 20px;
+/* Home sections */
+.hero {
+  position: relative;
+  text-align: center;
 }
 
-.view-buttons {
-  margin-bottom: 15px;
+.hero img {
+  width: 100%;
+  height: auto;
 }
 
+.cta {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn {
+  background: #ffcc00;
+  color: #004080;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.card-section {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 20px 0;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+/* Directory members */
 .grid {
   display: grid;
-  grid-template-columns: 1fr; /* una columna en móvil */
+  grid-template-columns: 1fr;
   gap: 20px;
 }
 
@@ -77,3 +130,11 @@ main {
   max-width: 100%;
   height: auto;
 }
+
+footer {
+  background: #004080;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+

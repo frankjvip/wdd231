@@ -1,5 +1,17 @@
-/* Se aplica en pantallas grandes */
+/* Styles for larger screens */
 @media (min-width: 768px) {
+  /* Home navigation */
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+    background: none;
+  }
+
+  nav ul li {
+    margin: 0 15px;
+  }
+
+  /* Directory navigation */
   .nav-links {
     display: flex;
     flex-direction: row;
@@ -12,7 +24,31 @@
     display: none;
   }
 
+  /* Home sections */
+  .hero {
+    margin-bottom: 30px;
+  }
+
+  .card-section {
+    display: inline-block;
+    width: 30%;
+    margin: 1%;
+    vertical-align: top;
+  }
+
+  #events, #weather, #spotlights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    font-size: 1.1em;
+  }
+
+  /* Directory members */
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
+
