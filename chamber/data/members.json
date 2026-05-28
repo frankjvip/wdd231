@@ -2,57 +2,49 @@
   {
     "name": "Tech Solutions",
     "address": "123 Main St",
-    "phone": "504-111-2222",
+    "phone": "555-1234",
     "website": "https://techsolutions.com",
     "image": "tech-small.png",
-    "membership": 3
-  },
-  {
-    "name": "Healthy Life Gym",
-    "address": "456 Fitness Ave",
-    "phone": "504-333-4444",
-    "website": "https://healthylife.com",
-    "image": "gym-small.png",
-    "membership": 2
+    "membership": "Gold"
   },
   {
     "name": "Green Market",
-    "address": "789 Fresh Rd",
-    "phone": "504-555-6666",
+    "address": "45 Elm St",
+    "phone": "555-5678",
     "website": "https://greenmarket.com",
     "image": "market-small.png",
-    "membership": 1
+    "membership": "Silver"
   },
   {
-    "name": "Smart Finance",
-    "address": "101 Money Blvd",
-    "phone": "504-777-8888",
-    "website": "https://smartfinance.com",
-    "image": "finance-small.png",
-    "membership": 2
+    "name": "Fitness Pro",
+    "address": "89 Oak St",
+    "phone": "555-8765",
+    "website": "https://fitnesspro.com",
+    "image": "gym-small.png",
+    "membership": "Gold"
   },
   {
-    "name": "Bright School",
-    "address": "202 Education St",
-    "phone": "504-999-0000",
-    "website": "https://brightschool.com",
-    "image": "school-small.png",
-    "membership": 3
-  },
-  {
-    "name": "AutoFix Garage",
-    "address": "303 Car Ln",
-    "phone": "504-121-2121",
+    "name": "AutoFix",
+    "address": "321 Pine St",
+    "phone": "555-4321",
     "website": "https://autofix.com",
     "image": "garage-small.png",
-    "membership": 1
+    "membership": "Bronze"
+  },
+  {
+    "name": "EduSmart",
+    "address": "654 Maple St",
+    "phone": "555-2468",
+    "website": "https://edusmart.com",
+    "image": "school-small.png",
+    "membership": "Silver"
   },
   {
     "name": "Creative Studio",
-    "address": "404 Art Ave",
-    "phone": "504-343-4343",
+    "address": "741 Birch St",
+    "phone": "555-9753",
     "website": "https://creativestudio.com",
     "image": "studio-small.png",
-    "membership": 2
+    "membership": "Silver"
   }
 ]

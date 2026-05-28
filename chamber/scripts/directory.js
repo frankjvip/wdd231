@@ -1,28 +1,41 @@
+// Hamburger menu
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+
+// Fetch members with async/await
 async function loadMembers() {
-  const response = await fetch("data/members.json");
-  const members = await response.json();
+  try {
+    const response = await fetch("data/members.json");
+    const members = await response.json();
+    displayMembers(members);
+  } catch (error) {
+    console.error("Error loading members:", error);
+  }
+}
+
+function displayMembers(members) {
   const container = document.getElementById("members");
-
-  container.innerHTML = ""; 
-
+  container.innerHTML = "";
   members.forEach(member => {
     const card = document.createElement("div");
-    card.classList.add("card");
+    card.classList.add("member-card");
     card.innerHTML = `
       <img src="images/${member.image}" alt="${member.name}">
       <h3>${member.name}</h3>
       <p>${member.address}</p>
       <p>${member.phone}</p>
-      <a href="${member.website}" target="_blank">Visit Website</a>
+      <a href="${member.website}" target="_blank">${member.website}</a>
       <p>Membership: ${member.membership}</p>
     `;
     container.appendChild(card);
   });
 }
 
-loadMembers();
-
-// Toggle views
+// Toggle grid/list
 document.getElementById("grid").addEventListener("click", () => {
   document.getElementById("members").className = "grid";
 });
@@ -30,3 +43,9 @@ document.getElementById("grid").addEventListener("click", () => {
 document.getElementById("list").addEventListener("click", () => {
   document.getElementById("members").className = "list";
 });
+
+loadMembers();
+
+// Footer year and last modified
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = document.lastModified;

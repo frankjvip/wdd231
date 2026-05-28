@@ -1,50 +1,18 @@
-/* large.css → styles for larger screens (desktop and tablets) */
-
+/* Se aplica en pantallas grandes */
 @media (min-width: 768px) {
-  /* Header layout */
-  header {
+  .nav-links {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
-  }
-
-  nav ul {
     flex-direction: row;
-    gap: 1rem;
-    margin: 0;
+    position: static;
+    background: none;
+    padding: 0;
   }
 
-  /* Hero image adjustments */
-  .hero img {
-    max-height: 400px;
-    object-fit: cover;
+  .hamburger {
+    display: none;
   }
 
-  /* Main content layout */
-  main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
-  }
-
-  section {
-    margin-bottom: 2rem;
-  }
-
-  /* Spotlights grid */
-  .spotlights {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  /* Footer layout */
-  footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }

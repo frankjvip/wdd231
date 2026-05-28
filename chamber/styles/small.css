@@ -1,115 +1,79 @@
-/* small.css → base styles for mobile-first design (small screens) */
-
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.5;
-  background-color: #f9f9f9;
-  color: #333;
 }
 
-/* Header */
 header {
-  background-color: #004466;
+  background: #004080;
   color: white;
-  padding: 1rem;
-  text-align: center;
+  padding: 10px;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 1.5rem;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0.5rem 0 0 0;
+.navbar {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: none; /* oculto en móvil */
   flex-direction: column;
-  gap: 0.5rem;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Hero section */
-.hero {
-  position: relative;
-  text-align: center;
-}
-
-.hero img {
-  width: 100%;
-  height: auto;
-}
-
-.cta {
+  background: #004080;
   position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 50px;
+  right: 10px;
+  padding: 10px;
 }
 
-.cta .btn {
-  background: #0066cc;
+.nav-links li a {
   color: white;
-  padding: 10px 20px;
   text-decoration: none;
-  border-radius: 5px;
+}
+
+.nav-links li a.active {
   font-weight: bold;
+  border-bottom: 2px solid yellow;
 }
 
-/* General sections */
-section {
-  padding: 1rem;
-  margin: 1rem 0;
-  background-color: #fff;
-  border-radius: 6px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
-}
-
-section h2 {
-  color: #004466;
-  margin-top: 0;
-}
-
-/* Spotlights */
-.spotlights {
-  display: grid;
-  gap: 1rem;
-}
-
-.spotlights .card {
-  border: 1px solid #ccc;
-  padding: 1rem;
-  text-align: center;
-  background-color: #fafafa;
-  border-radius: 6px;
-}
-
-.spotlights img {
-  max-width: 150px;
-  height: auto;
-  margin: 0 auto 0.5rem auto;
-}
-
-/* Footer */
-footer {
-  background-color: #004466;
+.hamburger {
+  display: block;
+  font-size: 24px;
+  background: none;
+  border: none;
   color: white;
-  text-align: center;
-  padding: 1rem;
 }
 
-footer p {
-  margin: 0.3rem 0;
+.nav-links.show {
+  display: flex;
+}
+
+main {
+  padding: 20px;
+}
+
+.view-buttons {
+  margin-bottom: 15px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr; /* una columna en móvil */
+  gap: 20px;
+}
+
+.list {
+  display: block;
+}
+
+.member-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  text-align: center;
+}
+
+.member-card img {
+  max-width: 100%;
+  height: auto;
 }
