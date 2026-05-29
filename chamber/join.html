@@ -11,7 +11,7 @@
   <!-- Open Graph Metadata -->
   <meta property="og:title" content="Join Santa Lucía Chamber of Commerce">
   <meta property="og:description" content="Apply to join the Santa Lucía Chamber of Commerce and access exclusive benefits, events, and networking opportunities.">
-  <meta property="og:image" content="https://franklin.github.io/chamber/images/chamber-banner.png">
+  <meta property="og:image" content="https://franklin.github.io/chamber/images/og-image.png">
   <meta property="og:url" content="https://franklin.github.io/chamber/join.html">
 
   <!-- Google Fonts -->
@@ -59,14 +59,16 @@
       <label>Organization Name:
         <input type="text" name="organization" title="Organization" autocomplete="organization" required>
       </label>
-      <label>Membership Level:
-        <select name="membership" title="Membership Level" required>
-          <option value="np">NP Membership</option>
-          <option value="bronze">Bronze Membership</option>
-          <option value="silver">Silver Membership</option>
-          <option value="gold">Gold Membership</option>
-        </select>
-      </label>
+<label>Membership Level:
+  <select name="membership" title="Membership Level" required>
+    <option value="" disabled selected>Select a membership level</option>
+    <option value="np">NP Membership</option>
+    <option value="bronze">Bronze Membership</option>
+    <option value="silver">Silver Membership</option>
+    <option value="gold">Gold Membership</option>
+  </select>
+</label>
+
       <label>Description:
         <textarea name="description" title="Business Description"></textarea>
       </label>
