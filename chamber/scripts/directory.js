@@ -1,4 +1,4 @@
-// Hamburger menu
+// Hamburger menu toggle
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("nav-links");
 
@@ -6,46 +6,65 @@ hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("show");
 });
 
-// Fetch members with async/await
+// Global variable to store members
+let currentMembers = [];
+
+// Load members using async/await
 async function loadMembers() {
   try {
     const response = await fetch("data/members.json");
-    const members = await response.json();
-    displayMembers(members);
+    currentMembers = await response.json();
+    displayMembers(currentMembers, "grid"); // Default view: grid
   } catch (error) {
     console.error("Error loading members:", error);
   }
 }
 
-function displayMembers(members) {
+// Display members depending on the selected view
+function displayMembers(members, view = "grid") {
   const container = document.getElementById("members");
   container.innerHTML = "";
+
   members.forEach(member => {
     const card = document.createElement("div");
     card.classList.add("member-card");
-    card.innerHTML = `
-      <img src="images/${member.image}" alt="${member.name}">
-      <h3>${member.name}</h3>
-      <p>${member.address}</p>
-      <p>${member.phone}</p>
-      <a href="${member.website}" target="_blank">${member.website}</a>
-      <p>Membership: ${member.membership}</p>
-    `;
+
+    if (view === "grid") {
+      // Grid view: show images and full card
+      card.innerHTML = `
+        <img src="images/${member.image}" alt="${member.name}">
+        <h3>${member.name}</h3>
+        <p>${member.address}</p>
+        <p>${member.phone}</p>
+        <a href="${member.website}" target="_blank">${member.website}</a>
+        <p>Membership: ${member.membership}</p>
+      `;
+    } else if (view === "list") {
+      // List view: text only, no images
+      card.innerHTML = `
+        <h3>${member.name}</h3>
+        <p>${member.address} | ${member.phone} | 
+        <a href="${member.website}" target="_blank">${member.website}</a> | 
+        Membership: ${member.membership}</p>
+      `;
+    }
+
     container.appendChild(card);
   });
 }
 
-// Toggle grid/list
+// Event listeners for toggle buttons
 document.getElementById("grid").addEventListener("click", () => {
-  document.getElementById("members").className = "grid";
+  displayMembers(currentMembers, "grid");
 });
 
 document.getElementById("list").addEventListener("click", () => {
-  document.getElementById("members").className = "list";
+  displayMembers(currentMembers, "list");
 });
-
-loadMembers();
 
 // Footer year and last modified
 document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
+
+// Load members when page starts
+loadMembers();
