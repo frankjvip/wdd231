@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thank You</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/large.css">
 </head>
@@ -20,19 +25,20 @@
 
   <main>
     <h1>Thank You for Joining!</h1>
-    <p>We appreciate your application. Here is the information you submitted:</p>
-
+    <p>Here is the information you submitted:</p>
     <div id="submittedData"></div>
   </main>
 
   <footer>
-    <p>&copy; 2026 Santa Lucía Chamber of Commerce</p>
+    <p>Contact: info@chamber.com | Phone: (504) 1234-5678</p>
+    <p>Franklin Rivas - WDD 231</p>
+    <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span></p>
   </footer>
 
+  <script src="scripts/date.js"></script>
   <script>
-    // Display submitted form data
     const params = new URLSearchParams(window.location.search);
-    const output = `
+    document.getElementById("submittedData").innerHTML = `
       <p><strong>First Name:</strong> ${params.get("firstName")}</p>
       <p><strong>Last Name:</strong> ${params.get("lastName")}</p>
       <p><strong>Email:</strong> ${params.get("email")}</p>
@@ -40,7 +46,6 @@
       <p><strong>Organization:</strong> ${params.get("organization")}</p>
       <p><strong>Timestamp:</strong> ${params.get("timestamp")}</p>
     `;
-    document.getElementById("submittedData").innerHTML = output;
   </script>
 </body>
 </html>
