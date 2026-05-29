@@ -11,8 +11,8 @@
   <!-- Open Graph Metadata -->
   <meta property="og:title" content="Thank You - Santa Lucía Chamber">
   <meta property="og:description" content="Your membership application has been submitted successfully.">
-  <meta property="og:image" content="https://tusitio.com/images/chamber-banner.png">
-  <meta property="og:url" content="https://tusitio.com/thankyou.html">
+  <meta property="og:image" content="https://franklin.github.io/chamber/images/chamber-banner.png">
+  <meta property="og:url" content="https://franklin.github.io/chamber/thankyou.html">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,6 +21,22 @@
 
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/large.css">
+
+  <!-- Scripts moved to head with defer -->
+  <script src="scripts/date.js" defer></script>
+  <script defer>
+    const params = new URLSearchParams(window.location.search);
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("confirmation").innerHTML = `
+        <p><strong>First Name:</strong> ${params.get("firstName")}</p>
+        <p><strong>Last Name:</strong> ${params.get("lastName")}</p>
+        <p><strong>Email:</strong> ${params.get("email")}</p>
+        <p><strong>Phone:</strong> ${params.get("phone")}</p>
+        <p><strong>Organization:</strong> ${params.get("organization")}</p>
+        <p><strong>Date Submitted:</strong> ${params.get("timestamp")}</p>
+      `;
+    });
+  </script>
 </head>
 <body>
   <header>
@@ -41,18 +57,5 @@
   <footer>
     <p>&copy; <span id="year"></span> Santa Lucía Chamber | Last Modified: <span id="lastModified"></span></p>
   </footer>
-
-  <script src="scripts/date.js" defer></script>
-  <script defer>
-    const params = new URLSearchParams(window.location.search);
-    document.getElementById("confirmation").innerHTML = `
-      <p><strong>First Name:</strong> ${params.get("firstName")}</p>
-      <p><strong>Last Name:</strong> ${params.get("lastName")}</p>
-      <p><strong>Email:</strong> ${params.get("email")}</p>
-      <p><strong>Phone:</strong> ${params.get("phone")}</p>
-      <p><strong>Organization:</strong> ${params.get("organization")}</p>
-      <p><strong>Date Submitted:</strong> ${params.get("timestamp")}</p>
-    `;
-  </script>
 </body>
 </html>
