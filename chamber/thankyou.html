@@ -4,9 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thank You | Santa Lucía Chamber</title>
+  <meta name="description" content="Thank you for joining the Santa Lucía Chamber of Commerce.">
+  <meta name="author" content="Franklin [Tu Apellido]">
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Open Graph Metadata -->
+  <meta property="og:title" content="Thank You - Santa Lucía Chamber">
+  <meta property="og:description" content="Your membership application has been submitted successfully.">
+  <meta property="og:image" content="https://tusitio.com/images/chamber-banner.png">
+  <meta property="og:url" content="https://tusitio.com/thankyou.html">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/large.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -27,8 +41,9 @@
   <footer>
     <p>&copy; <span id="year"></span> Santa Lucía Chamber | Last Modified: <span id="lastModified"></span></p>
   </footer>
-  <script src="scripts/date.js"></script>
-  <script>
+
+  <script src="scripts/date.js" defer></script>
+  <script defer>
     const params = new URLSearchParams(window.location.search);
     document.getElementById("confirmation").innerHTML = `
       <p><strong>First Name:</strong> ${params.get("firstName")}</p>
