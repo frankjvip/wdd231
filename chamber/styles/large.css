@@ -1,53 +1,36 @@
-/* ===== Desktop Overrides ===== */
-@media (min-width: 768px) {
-  /* Navigation */
+@media (min-width: 32rem) {
   nav ul {
-    flex-direction: row;
+    display: flex;
     justify-content: center;
+    gap: 1rem;
   }
 
-  /* Main container */
-  main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem; /* override padding for desktop */
+  /* Directory Page - Grid on medium screens */
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
+}
 
-  /* ===== Home Page ===== */
-  .card-section {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+@media (min-width: 48rem) {
+  /* Join Page - Membership cards on medium screens */
+  .membership-cards {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  .card {
-    flex: 1 1 250px;
-    margin: 0.5rem;
-  }
-
-  /* ===== Directory Page ===== */
+@media (min-width: 64rem) {
+  /* Directory Page - Grid on large screens */
   .grid {
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  .list-view .member-card {
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* ===== Join Page ===== */
-  main {
-    display: flex;
-    flex-direction: row;
     gap: 2rem;
   }
 
-  form {
-    flex: 2;
+  /* Directory Page - List view on large screens */
+  .list .card {
+    flex-direction: row;
+    justify-content: flex-start;
   }
 
-  .membership-cards {
-    flex: 1;
-    flex-direction: column;
-  }
-}
+  /* Home Page - Hero larger on desktop */
+  .hero

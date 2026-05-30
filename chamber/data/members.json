@@ -1,50 +1,52 @@
-[
-  {
-    "name": "Tech Solutions",
-    "address": "123 Main St",
-    "phone": "555-1234",
-    "website": "https://techsolutions.com",
-    "image": "tech-small.png",
-    "membership": "Gold"
-  },
-  {
-    "name": "Green Market",
-    "address": "45 Elm St",
-    "phone": "555-5678",
-    "website": "https://greenmarket.com",
-    "image": "market-small.png",
-    "membership": "Silver"
-  },
-  {
-    "name": "Fitness Pro",
-    "address": "89 Oak St",
-    "phone": "555-8765",
-    "website": "https://fitnesspro.com",
-    "image": "gym-small.png",
-    "membership": "Gold"
-  },
-  {
-    "name": "AutoFix",
-    "address": "321 Pine St",
-    "phone": "555-4321",
-    "website": "https://autofix.com",
-    "image": "garage-small.png",
-    "membership": "Bronze"
-  },
-  {
-    "name": "EduSmart",
-    "address": "654 Maple St",
-    "phone": "555-2468",
-    "website": "https://edusmart.com",
-    "image": "school-small.png",
-    "membership": "Silver"
-  },
-  {
-    "name": "Creative Studio",
-    "address": "741 Birch St",
-    "phone": "555-9753",
-    "website": "https://creativestudio.com",
-    "image": "studio-small.png",
-    "membership": "Silver"
-  }
-]
+{
+  "members": [
+    {
+      "name": "Tech Solutions",
+      "address": "123 Main St",
+      "phone": "555-1234",
+      "website": "https://techsolutions.com",
+      "membership": "Gold",
+      "image": "tech.png"
+    },
+    {
+      "name": "Green Market",
+      "address": "45 Elm St",
+      "phone": "555-5678",
+      "website": "https://greenmarket.com",
+      "membership": "Silver",
+      "image": "market.png"
+    },
+    {
+      "name": "Fitness Pro",
+      "address": "89 Oak St",
+      "phone": "555-8765",
+      "website": "https://fitnesspro.com",
+      "membership": "Gold",
+      "image": "gym.png"
+    },
+    {
+      "name": "AutoFix Garage",
+      "address": "321 Pine St",
+      "phone": "555-4321",
+      "website": "https://autofixgarage.com",
+      "membership": "Bronze",
+      "image": "garage.png"
+    },
+    {
+      "name": "EduSmart Academy",
+      "address": "654 Maple St",
+      "phone": "555-2468",
+      "website": "https://edusmartacademy.com",
+      "membership": "Silver",
+      "image": "school.png"
+    },
+    {
+      "name": "Creative Studio",
+      "address": "741 Birch St",
+      "phone": "555-1357",
+      "website": "https://creativestudio.com",
+      "membership": "Gold",
+      "image": "studio.png"
+    }
+  ]
+}

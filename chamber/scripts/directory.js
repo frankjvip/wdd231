@@ -1,70 +1,74 @@
-// Hamburger menu toggle
-const hamburger = document.getElementById("hamburger");
-const navLinks = document.getElementById("nav-links");
+// Cargar datos desde members.json y renderizar tarjetas
+const membersContainer = document.querySelector("#members");
+const gridButton = document.querySelector("#grid");
+const listButton = document.querySelector("#list");
 
-hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
-});
-
-// Global variable to store members
-let currentMembers = [];
-
-// Load members using async/await
-async function loadMembers() {
-  try {
-    const response = await fetch("data/members.json");
-    currentMembers = await response.json();
-    displayMembers(currentMembers, "grid"); // Default view: grid
-  } catch (error) {
-    console.error("Error loading members:", error);
-  }
+async function getMembers() {
+  const response = await fetch("data/members.json");
+  const data = await response.json();
+  displayMembers(data.members);
 }
 
-// Display members depending on the selected view
-function displayMembers(members, view = "grid") {
-  const container = document.getElementById("members");
-  container.innerHTML = "";
+// Función para mostrar miembros
+function displayMembers(members) {
+  // Limpiar contenido antes de recargar
+  membersContainer.innerHTML = "";
 
   members.forEach(member => {
     const card = document.createElement("div");
-    card.classList.add("member-card");
+    card.classList.add("card");
 
-    if (view === "grid") {
-      // Grid view: show images and full card
-      card.innerHTML = `
-        <img src="images/${member.image}" alt="${member.name}">
-        <h3>${member.name}</h3>
-        <p>${member.address}</p>
-        <p>${member.phone}</p>
-        <a href="${member.website}" target="_blank">${member.website}</a>
-        <p>Membership: ${member.membership}</p>
-      `;
-    } else if (view === "list") {
-      // List view: text only, no images
-      card.innerHTML = `
-        <h3>${member.name}</h3>
-        <p>${member.address} | ${member.phone} | 
-        <a href="${member.website}" target="_blank">${member.website}</a> | 
-        Membership: ${member.membership}</p>
-      `;
-    }
+    // Logo
+    const logo = document.createElement("img");
+    logo.src = `images/${member.image}`;
+    logo.alt = `${member.name} logo`;
 
-    container.appendChild(card);
+    // Nombre
+    const name = document.createElement("h3");
+    name.textContent = member.name;
+
+    // Dirección
+    const address = document.createElement("p");
+    address.textContent = member.address;
+
+    // Teléfono
+    const phone = document.createElement("p");
+    phone.textContent = member.phone;
+
+    // Website
+    const website = document.createElement("a");
+    website.href = member.website;
+    website.textContent = member.website;
+    website.target = "_blank";
+
+    // Membresía
+    const membership = document.createElement("p");
+    membership.textContent = `Membership: ${member.membership}`;
+
+    // Agregar elementos a la tarjeta
+    card.appendChild(logo);
+    card.appendChild(name);
+    card.appendChild(address);
+    card.appendChild(phone);
+    card.appendChild(website);
+    card.appendChild(membership);
+
+    membersContainer.appendChild(card);
   });
 }
 
-// Event listeners for toggle buttons
-document.getElementById("grid").addEventListener("click", () => {
-  displayMembers(currentMembers, "grid");
+// Botones de vista
+gridButton.addEventListener("click", () => {
+  membersContainer.classList.add("grid");
+  membersContainer.classList.remove("list");
+  getMembers(); // recargar para evitar duplicados
 });
 
-document.getElementById("list").addEventListener("click", () => {
-  displayMembers(currentMembers, "list");
+listButton.addEventListener("click", () => {
+  membersContainer.classList.add("list");
+  membersContainer.classList.remove("grid");
+  getMembers(); // recargar para evitar duplicados
 });
 
-// Footer year and last modified
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = document.lastModified;
-
-// Load members when page starts
-loadMembers();
+// Inicializar
+getMembers();
