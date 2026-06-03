@@ -1,0 +1,39 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  margin: 20px auto;
+  max-width: 1200px;
+  line-height: 1.8;
+}
+
+h1, h2 {
+  color: #2a5d84;
+  font-family: 'Roboto', sans-serif;
+}
+
+.accent {
+  color: #e67e22;
+}
+
+.heading {
+  color: #2a5d84;
+}
+
+header, footer {
+  text-align: center;
+  padding: 20px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.wireframe {
+  border: 2px dashed #2a5d84;
+  padding: 20px;
+  margin: 20px 0;
+  background-color: #f9f9f9;
+}
