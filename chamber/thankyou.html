@@ -3,43 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thank You | Santa Lucía Chamber</title>
-  <meta name="description" content="Thank you for joining the Santa Lucía Chamber of Commerce.">
-  <meta name="author" content="Franklin [Tu Apellido]">
-  <link rel="icon" href="images/favicon.ico">
+  <title>Thank You</title>
 
-  <!-- Open Graph Metadata -->
-  <meta property="og:title" content="Thank You - Santa Lucía Chamber">
-  <meta property="og:description" content="Your membership application has been submitted successfully.">
-  <meta property="og:image" content="https://frankjvip.github.io/chamber/images/og-image.png">
-  <meta property="og:url" content="https://frankjvip.github.io/chamber/thankyou.html">
-
-  <!-- Google Fonts -->
+  <!-- Google Fonts (required by audit) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
+  <!-- Metadata -->
+  <meta name="author" content="Franklin Rivas">
+  <meta name="description" content="Thank You page for Chamber Membership Application. Displays submitted form data and confirms successful application.">
+
+  <!-- Open Graph tags -->
+  <meta property="og:title" content="Thank You - Chamber of Commerce">
+  <meta property="og:description" content="Confirmation page showing submitted membership application details.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://frankjvip.github.io/wdd231/thankyou.html">
+  <meta property="og:image" content="https://frankjvip.github.io/wdd231/images/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/large.css">
-
-  <!-- Scripts moved to head with defer -->
-  <script src="scripts/date.js" defer></script>
-  <script defer>
-    const params = new URLSearchParams(window.location.search);
-    document.addEventListener("DOMContentLoaded", () => {
-      document.getElementById("confirmation").innerHTML = `
-        <p><strong>First Name:</strong> ${params.get("firstName")}</p>
-        <p><strong>Last Name:</strong> ${params.get("lastName")}</p>
-        <p><strong>Email:</strong> ${params.get("email")}</p>
-        <p><strong>Phone:</strong> ${params.get("phone")}</p>
-        <p><strong>Organization:</strong> ${params.get("organization")}</p>
-        <p><strong>Date Submitted:</strong> ${params.get("timestamp")}</p>
-      `;
-    });
-  </script>
 </head>
 <body>
   <header>
+    <h1>Thank You</h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -50,12 +41,21 @@
   </header>
 
   <main>
-    <h1>Thank You for Joining!</h1>
-    <div id="confirmation"></div>
+    <section>
+      <h2>Your Membership Application</h2>
+      <!-- This container will be filled dynamically with form data -->
+      <div id="thankyouData"></div>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> Santa Lucía Chamber | Last Modified: <span id="lastModified"></span></p>
+    <p>Contact: info@chamber.com | Phone: (504) 1234-5678</p>
+    <p>Franklin Rivas - WDD 231</p>
+    <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span></p>
   </footer>
+
+  <!-- Scripts -->
+  <script src="scripts/date.js"></script>
+  <script src="scripts/thankyou.js"></script>
 </body>
 </html>

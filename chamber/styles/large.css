@@ -33,4 +33,21 @@
   }
 
   /* Home Page - Hero larger on desktop */
-  .hero
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero img {
+    max-height: 500px; /* allow taller hero image on desktop */
+  }
+
+  /* Join Page - Form wider on desktop */
+  form {
+    max-width: 800px;
+  }
+
+  /* Join Page - Membership cards on large screens */
+  .membership-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
