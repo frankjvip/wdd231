@@ -1,0 +1,39 @@
+@media (min-width: 641px) and (max-width: 1024px) {
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .hero {
+    padding: 3rem;
+    font-size: 1.2rem;
+  }
+
+  /* Directory grid */
+  .directory {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  /* Join Page form */
+  form {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  /* Discover Page grid */
+  #discover-grid {
+    display: grid;
+    grid-template-areas:
+      "card1 card2"
+      "card3 card4"
+      "card5 card6"
+      "card7 card8";
+    gap: 1rem;
+  }
+}
