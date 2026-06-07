@@ -18,10 +18,11 @@ function displayMembers(members) {
     const card = document.createElement("div");
     card.classList.add("card");
 
-    // Logo
+    // Logo con Lazy Loading
     const logo = document.createElement("img");
     logo.src = `images/${member.image}`;
     logo.alt = `${member.name} logo`;
+    logo.loading = "lazy"; // 👈 aquí está el cambio
 
     // Nombre
     const name = document.createElement("h3");
