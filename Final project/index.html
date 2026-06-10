@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Orden correcto: charset y viewport primero -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Strong After 40 - Home</title>
@@ -12,18 +13,20 @@
   <!-- Open Graph Metadata -->
   <meta property="og:title" content="Strong After 40 - Home">
   <meta property="og:description" content="Discover fitness routines, nutrition tips, and motivation designed for adults over 40. Stay strong and healthy with Strong After 40.">
-  <meta property="og:image" content="https://frankjvip.github.io/finalproject/images/og-image.png">
-  <meta property="og:url" content="https://frankjvip.github.io/finalproject/index.html">
+  <meta property="og:image" content="https://frankjvip.github.io/wdd231/finalproject/images/og-image.jpg">
+  <meta property="og:url" content="https://frankjvip.github.io/wdd231/finalproject/index.html">
 
-  <!-- Favicon -->
+  <!-- Favicon completo -->
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="manifest" href="images/site.webmanifest">
 
-  <!-- Google Fonts -->
+  <!-- Fonts & CSS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/large.css">
 </head>
@@ -43,10 +46,10 @@
   </header>
 
   <main>
-    <!-- Main Title -->
+    <!-- Main Title dentro de <main> para que el audit lo reconozca -->
     <h1>Strong After 40</h1>
 
-    <!-- Hero Section -->
+    <!-- Hero Section con overlay -->
     <section class="hero">
       <h2>Health & Strength for Life</h2>
       <p>Discover practical fitness routines, nutrition tips, and motivation designed for adults over 40.</p>
@@ -71,7 +74,6 @@
   </footer>
 
   <script>
-    // Dynamic last modified
     document.getElementById("lastModified").textContent = document.lastModified;
   </script>
 </body>
