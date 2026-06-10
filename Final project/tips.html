@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Strong After 40 - Health & Lifestyle Tips</title>
+  <meta name="description" content="Health and lifestyle tips for adults over 40, including nutrition, recovery, and motivation.">
+  <meta name="author" content="Franklin">
+
+  <!-- Open Graph Metadata -->
+  <meta property="og:title" content="Strong After 40 - Health & Lifestyle Tips">
+  <meta property="og:description" content="Discover nutrition advice, recovery strategies, and motivational content for adults over 40.">
+  <meta property="og:image" content="images/og-image.png">
+  <meta property="og:url" content="https://frankjvip.github.io/finalproject/tips.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Strong After 40 Logo" class="logo">
+    <h1>Strong After 40</h1>
+    <nav>
+      <button id="menu-button">☰</button>
+      <ul id="menu" class="hidden">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="routines.html">Fitness Routines</a></li>
+        <li><a href="tips.html" class="active">Health & Lifestyle Tips</a></li>
+        <li><a href="attribution.html">Attributions</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Health & Lifestyle Tips</h2>
+      <p>Nutrition, recovery, and motivation are key to staying strong after 40. Explore practical advice to support your long-term wellness.</p>
+    </section>
+
+    <section class="tips-list">
+      <h3>Featured Tips</h3>
+      <ul>
+        <li>Eat balanced meals with lean protein, whole grains, and vegetables.</li>
+        <li>Stay hydrated and limit sugary drinks.</li>
+        <li>Prioritize recovery with stretching and quality sleep.</li>
+        <li>Use resistance bands for safe, effective workouts at home.</li>
+      </ul>
+    </section>
+
+    <section class="form-section">
+      <h3>Subscribe for Updates</h3>
+      <form action="form.html" method="get">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="goal">Your Health Goal:</label>
+        <select id="goal" name="goal" required>
+          <option value="">Select one...</option>
+          <option value="weight-loss">Weight Loss</option>
+          <option value="muscle-gain">Muscle Gain</option>
+          <option value="general-health">General Health</option>
+        </select>
+
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Strong After 40 | WDD 231 | Last Modified: <span id="lastModified"></span></p>
+    <p><a href="https://youtube.com/your-video-link" target="_blank">Project Demo Video</a></p>
+  </footer>
+
+  <script type="module" src="scripts/main.js"></script>
+  <script>
+    // Dynamic year and last modified
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+</html>

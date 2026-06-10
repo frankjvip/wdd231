@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Strong After 40 - Attributions</title>
+  <meta name="description" content="Attributions and sources for Strong After 40 project.">
+  <meta name="author" content="Franklin">
+
+  <!-- Open Graph Metadata -->
+  <meta property="og:title" content="Strong After 40 - Attributions">
+  <meta property="og:description" content="Sources and credits for images and content used in Strong After 40.">
+  <meta property="og:image" content="images/og-image.png">
+  <meta property="og:url" content="https://frankjvip.github.io/finalproject/attribution.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Strong After 40 Logo" class="logo">
+    <h1>Strong After 40</h1>
+    <nav>
+      <button id="menu-button">☰</button>
+      <ul id="menu" class="hidden">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="routines.html">Fitness Routines</a></li>
+        <li><a href="tips.html">Health & Lifestyle Tips</a></li>
+        <li><a href="attribution.html" class="active">Attributions</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Attributions</h2>
+      <p>This page lists the sources and credits for images, icons, and content used in the Strong After 40 project.</p>
+    </section>
+
+    <section class="sources">
+      <ul>
+        <li>Logo and Cover Image: Created specifically for Strong After 40 project.</li>
+        <li>Favicon: Derived from the official logo.</li>
+        <li>Icons: Unicode characters (hamburger menu ☰).</li>
+        <li>Fonts: Google Fonts (Roboto, Open Sans).</li>
+        <li>Any additional stock images or references should be listed here with proper attribution (e.g., Unsplash, Pexels, Pixabay).</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Strong After 40 | WDD 231 | Last Modified: <span id="lastModified"></span></p>
+    <p><a href="https://youtube.com/your-video-link" target="_blank">Project Demo Video</a></p>
+  </footer>
+
+  <script>
+    // Dynamic year and last modified
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+</html>

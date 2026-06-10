@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Strong After 40 - Home</title>
+  <meta name="description" content="Strong After 40 promotes fitness, nutrition, and motivation for adults over 40.">
+  <meta name="author" content="Franklin">
+
+  <!-- Open Graph Metadata -->
+  <meta property="og:title" content="Strong After 40 - Home">
+  <meta property="og:description" content="Fitness, nutrition, and motivation for adults over 40.">
+  <meta property="og:image" content="images/og-image.png">
+  <meta property="og:url" content="https://frankjvip.github.io/finalproject/index.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="icon" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="icon" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="manifest" href="images/site.webmanifest">
+
+  <!-- Fonts & CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Strong After 40 Logo" class="logo">
+    <nav>
+      <button id="menu-button">☰</button>
+      <ul id="menu" class="hidden">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="routines.html">Fitness Routines</a></li>
+        <li><a href="tips.html">Health & Lifestyle Tips</a></li>
+        <li><a href="attributions.html">Attributions</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle">Toggle Theme</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Health & Strength for Life</h2>
+    <p>Discover practical fitness routines, nutrition tips, and motivation designed for adults over 40.</p>
+    <button>Start Your Journey</button>
+  </section>
+
+  <!-- Intro Section -->
+  <section class="intro">
+    <h2>Welcome to Strong After 40</h2>
+    <p>Our mission is to inspire and guide people over 40 to stay active, healthy, and strong. Explore routines, lifestyle tips, and resources to support your journey.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Strong After 40 | WDD 231 | Last Modified: <span id="lastModified"></span></p>
+    <a href="demo.html">Project Demo Video</a>
+    <div class="social">
+      <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="images/tiktok.png" alt="TikTok"></a>
+      <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+    </div>
+  </footer>
+
+  <script>
+    // Dynamic last modified
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+</html>
