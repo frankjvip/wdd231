@@ -12,7 +12,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 20px 40px;
   background: linear-gradient(135deg, #2a5d84, #1b3c57);
   color: #fff;
 }
@@ -28,11 +28,13 @@ nav {
 }
 
 #menu-button {
-  display: none; /* hidden on large screens */
+  display: none; /* oculto en desktop */
 }
 
 #menu {
   display: flex;
+  flex-direction: row; /* horizontal en desktop */
+  justify-content: flex-end;
   gap: 20px;
 }
 
@@ -44,11 +46,13 @@ nav {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
-  padding: 8px 14px;
+  padding: 10px 20px;
   border: 1px solid rgba(255,255,255,0.3);
   border-radius: 6px;
   background: rgba(255,255,255,0.1);
   transition: background 0.3s ease, transform 0.2s ease;
+  width: auto; /* no ocupar todo el ancho */
+  font-size: 1rem;
 }
 
 #menu a.active {
@@ -69,7 +73,8 @@ nav {
   background: url("../images/cover.png") center/cover no-repeat;
   color: #fff;
   position: relative;
-  height: 500px; /* altura fija en desktop */
+  min-height: 80vh; /* flexible */
+  padding: 60px 40px;
 }
 .hero::after {
   content: "";
@@ -82,6 +87,14 @@ nav {
   z-index: 1;
   text-align: center;
 }
+.hero h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
 .hero button {
   background: #e67e22;
   color: #fff;
@@ -91,17 +104,23 @@ nav {
   font-size: 1.2rem;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
+  width: auto;
 }
 .hero button:hover {
   background: #cf5c0d;
   transform: translateY(-3px);
 }
 
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+p { font-size: 1.1rem; }
+
 .intro, .tips-list, .form-section {
-  margin: 30px 0;
+  margin: 40px auto;
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 8px;
+  max-width: 900px;
 }
 
 .tips-list ul {
@@ -116,6 +135,8 @@ nav {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 600px;
+  margin: 20px auto;
 }
 .routine-card:hover {
   transform: translateY(-8px);
@@ -161,9 +182,9 @@ form button:hover {
 
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 30px;
   margin-top: 40px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   background: #1b3c57;
   color: #fff;
 }
@@ -175,4 +196,32 @@ footer .social img {
 footer .social img:hover {
   transform: scale(1.2);
   filter: brightness(1.3);
+}
+
+/* Estilo especial para el enlace del footer */
+footer a {
+  color: #90ee90; /* verde claro */
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+footer a:hover {
+  color: #32cd32; /* verde más intenso al pasar el mouse */
+  text-decoration: underline;
+}
+
+/* Botón Home en demo.html */
+.btn-home {
+  display: inline-block;
+  background: #2a5d84;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.btn-home:hover {
+  background: #1b3c57;
+  transform: translateY(-2px);
 }
