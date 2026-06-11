@@ -20,7 +20,7 @@ header {
 }
 
 .logo {
-  max-width: 80px;
+  max-width: 70px;
   height: auto;
 }
 
@@ -80,8 +80,8 @@ nav {
   color: #fff;
   text-align: center;
   position: relative;
-  min-height: 60vh; /* más flexible que altura fija */
-  padding: 40px 20px; /* espacio interno para móviles */
+  min-height: 50vh; /* más flexible */
+  padding: 40px 20px;
 }
 .hero::after {
   content: "";
@@ -199,9 +199,28 @@ img {
 }
 
 @media (max-width: 600px) {
-  h1 { font-size: 1.8rem; }
-  h2 { font-size: 1.4rem; }
-  p { font-size: 1rem; }
-  .hero { padding: 30px 15px; }
-  .hero button { width: 100%; } /* botón ocupa todo el ancho en móvil */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #theme-toggle {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.2rem; }
+  p { font-size: 0.95rem; }
+  .hero {
+    min-height: 50vh;
+    background-size: contain;
+    padding: 20px 10px;
+  }
+  .hero h2 { font-size: 1.2rem; }
+  .hero p { font-size: 0.95rem; }
+  .hero button, #menu a {
+    width: 100%;
+    text-align: center;
+  }
 }
