@@ -198,15 +198,15 @@ footer .social img:hover {
   filter: brightness(1.3);
 }
 
-/* Estilo especial para el enlace del footer */
+
 footer a {
-  color: #90ee90; /* verde claro */
+  color: #e67e22; 
   font-weight: bold;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 footer a:hover {
-  color: #32cd32; /* verde más intenso al pasar el mouse */
+  color: #e67e22; 
   text-decoration: underline;
 }
 

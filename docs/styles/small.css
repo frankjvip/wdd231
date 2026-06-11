@@ -34,6 +34,7 @@ nav {
   font-size: 1.5rem;
   cursor: pointer;
   color: #fff;
+  display: block; /* visible en móvil */
 }
 
 #menu {
@@ -76,12 +77,12 @@ nav {
 }
 
 .hero {
-  background: url("../images/cover.png") center/cover no-repeat;
+  background: url("../images/cover.png") center/contain no-repeat;
   color: #fff;
   text-align: center;
   position: relative;
-  min-height: 50vh; /* más flexible */
-  padding: 40px 20px;
+  min-height: 40vh; /* más compacto en móvil */
+  padding: 20px 10px;
 }
 .hero::after {
   content: "";
@@ -192,15 +193,15 @@ footer .social img:hover {
   filter: brightness(1.3);
 }
 
-/* Estilo especial para el enlace del footer en móvil */
+
 footer a {
-  color: #90ee90; /* verde claro */
+  color: #e67e22;
   font-weight: bold;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 footer a:hover {
-  color: #32cd32; /* verde más intenso */
+  color: #e67e22;
   text-decoration: underline;
 }
 
@@ -240,11 +241,6 @@ img {
   h1 { font-size: 1.6rem; }
   h2 { font-size: 1.2rem; }
   p { font-size: 0.95rem; }
-  .hero {
-    min-height: 50vh;
-    background-size: contain;
-    padding: 20px 10px;
-  }
   .hero h2 { font-size: 1.2rem; }
   .hero p { font-size: 0.95rem; }
   .hero button, #menu a {
