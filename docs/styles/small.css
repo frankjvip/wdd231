@@ -40,6 +40,9 @@ nav {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column; /* apilar en móvil */
+  gap: 8px;
 }
 
 #menu li {
@@ -55,6 +58,7 @@ nav {
   border-radius: 6px;
   background: rgba(255,255,255,0.1);
   transition: background 0.3s ease, transform 0.2s ease;
+  display: block; /* ocupa todo el ancho en móvil */
 }
 
 #menu a.active {
@@ -76,7 +80,8 @@ nav {
   color: #fff;
   text-align: center;
   position: relative;
-  height: 400px; /* altura fija para evitar deformación */
+  min-height: 60vh; /* más flexible que altura fija */
+  padding: 40px 20px; /* espacio interno para móviles */
 }
 .hero::after {
   content: "";
@@ -185,4 +190,18 @@ footer .social img {
 footer .social img:hover {
   transform: scale(1.2);
   filter: brightness(1.3);
+}
+
+/* Ajustes responsive adicionales */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.4rem; }
+  p { font-size: 1rem; }
+  .hero { padding: 30px 15px; }
+  .hero button { width: 100%; } /* botón ocupa todo el ancho en móvil */
 }
