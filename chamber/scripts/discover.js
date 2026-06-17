@@ -2,7 +2,7 @@ import { places } from "../data/discover.mjs";
 
 const grid = document.getElementById("discover-grid");
 
-// Crear cards dinámicamente
+// Crear cards dinámicamente con lazy loading
 places.forEach((place, index) => {
   const card = document.createElement("section");
   card.classList.add("card");
@@ -11,7 +11,7 @@ places.forEach((place, index) => {
   card.innerHTML = `
     <h2>${place.name}</h2>
     <figure>
-      <img src="images/${place.image}" alt="${place.name}">
+      <img src="images/${place.image}" alt="${place.name}" loading="lazy">
     </figure>
     <address>${place.address}</address>
     <p>${place.description}</p>
@@ -42,3 +42,11 @@ localStorage.setItem("lastVisit", now);
 // Footer dinámico
 document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
+
+// Hamburger funcional
+const menuButton = document.getElementById("menuButton");
+const menu = document.getElementById("menu");
+
+menuButton.addEventListener("click", () => {
+  menu.classList.toggle("hidden");
+});

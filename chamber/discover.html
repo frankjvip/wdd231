@@ -31,9 +31,15 @@
 </head>
 <body>
   <header>
-    <h1>Santa Lucía Chamber of Commerce</h1>
-    <nav>
-      <ul>
+    <nav class="navbar">
+      <div class="nav-left">
+        <a href="index.html">
+          <img src="images/og-image.png" alt="Site Logo" class="logo">
+        </a>
+        <span class="site-title">Santa Lucía Chamber of Commerce</span>
+      </div>
+      <button id="menuButton">☰</button>
+      <ul id="menu" class="hidden">
         <li><a href="index.html">Home</a></li>
         <li><a href="directory.html">Directory</a></li>
         <li><a href="join.html">Join</a></li>
@@ -42,7 +48,7 @@
     </nav>
   </header>
 
-  <main id="discover-grid">
+  <main id="discover-grid" class="cards">
     <!-- Cards se insertan dinámicamente desde discover.js -->
   </main>
 

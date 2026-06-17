@@ -13,6 +13,7 @@
 
   /* Discover Page - Grid on medium screens */
   #discover-grid {
+    display: grid;
     grid-template-areas:
       "card1 card2"
       "card3 card4"
@@ -63,16 +64,32 @@
 
   /* Discover Page - Grid on large screens */
   #discover-grid {
+    display: grid;
     grid-template-areas:
       "card1 card2 card3 card4"
       "card5 card6 card7 card8";
     gap: 1.5rem;
   }
 
-  /* Hover effect solo desktop */
+  /* ✅ Hover effect solo desktop */
   #discover-grid .card img:hover {
     filter: brightness(80%);
     transform: scale(1.05);
     transition: all 0.3s ease;
+  }
+
+  /* ✅ Menú horizontal en desktop */
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  #menu.hidden {
+    display: flex !important; /* fuerza que se muestre en desktop */
+  }
+
+  #menuButton {
+    display: none; /* oculta el botón ☰ en desktop */
   }
 }

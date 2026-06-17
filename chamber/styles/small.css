@@ -12,22 +12,45 @@ header, footer {
   background: #004466;
   color: white;
   padding: 1rem;
-  text-align: center;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 1.8rem;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  height: 40px;
+}
+
+.site-title {
+  font-size: 1rem;
   font-weight: bold;
+  color: white;
 }
 
-nav ul {
+#menuButton {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+#menu {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-nav ul li {
+#menu li {
   margin: 0.5rem 0;
 }
 
@@ -54,8 +77,8 @@ nav a.active {
 
 .hero img {
   width: 100%;
-  max-height: 400px;   /* limit height on small screens */
-  object-fit: cover;   /* crop nicely instead of stretching */
+  max-height: 400px;
+  object-fit: cover;
   display: block;
   border-radius: 8px;
 }
@@ -312,7 +335,7 @@ button[type="submit"]:hover {
 
 /* Join Page - Modal */
 .modal {
-  display: none; /* hidden by default */
+  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -331,34 +354,4 @@ button[type="submit"]:hover {
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translate(-50%, -40%); }
-  to { opacity: 1; transform: translate(-50%, -50%); }
-}
-/* Discover Page grid */
-#discover-grid {
-  display: grid;
-  grid-template-areas:
-    "card1"
-    "card2"
-    "card3"
-    "card4"
-    "card5"
-    "card6"
-    "card7"
-    "card8";
-  gap: 1rem;
-  padding: 1rem;
-}
-
-#discover-grid .card {
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: 1rem;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-#discover-grid .card img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-}
+  to { opacity: 1; transform: translate(-50%, -
