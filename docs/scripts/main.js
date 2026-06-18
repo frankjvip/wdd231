@@ -35,7 +35,7 @@ if (localStorage.getItem("theme") === "dark") {
 const ctaBtn = document.getElementById("cta-btn");
 if (ctaBtn) {
   ctaBtn.addEventListener("click", () => {
-    window.location.href = "signup.html"; // ajusta destino real
+    window.location.href = "routines.html"; // ajusta destino real
   });
 }
 
