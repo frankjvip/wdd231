@@ -5,23 +5,51 @@ document.addEventListener("DOMContentLoaded", () => {
     ts.value = new Date().toLocaleString();
   }
 
-  // Modal functionality
-  document.querySelectorAll(".card a").forEach(link => {
-    link.addEventListener("click", e => {
-      e.preventDefault();
-      const modalId = link.getAttribute("href");
-      const modal = document.querySelector(modalId);
+  // Footer dinámico
+  const yearSpan = document.getElementById("year");
+  const lastModifiedSpan = document.getElementById("lastModified");
+  if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+  if (lastModifiedSpan) lastModifiedSpan.textContent = document.lastModified;
+
+  // Hamburger menu
+  const menuButton = document.getElementById("menuButton");
+  const menu = document.getElementById("menu");
+  if (menuButton && menu) {
+    menuButton.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  }
+
+  // Modal functionality (usando data-modal en botones)
+  const modalButtons = document.querySelectorAll("[data-modal]");
+  const modals = document.querySelectorAll(".modal");
+  const closeButtons = document.querySelectorAll(".modal .close");
+
+  // Abrir modal
+  modalButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const modalId = button.getAttribute("data-modal");
+      const modal = document.getElementById(modalId);
       if (modal) {
-        modal.classList.add("active"); // use CSS class for animation
+        modal.classList.add("active"); // usa CSS class para animación
       }
     });
   });
 
-  // Close buttons
-  document.querySelectorAll(".close").forEach(btn => {
+  // Cerrar modal con botón "Close"
+  closeButtons.forEach(btn => {
     btn.addEventListener("click", () => {
       const modal = btn.closest(".modal");
       if (modal) {
+        modal.classList.remove("active");
+      }
+    });
+  });
+
+  // Cerrar modal haciendo clic fuera del contenido
+  window.addEventListener("click", (event) => {
+    modals.forEach(modal => {
+      if (event.target === modal) {
         modal.classList.remove("active");
       }
     });

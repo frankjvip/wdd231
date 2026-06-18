@@ -4,52 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thank You</title>
-
-  <!-- Google Fonts (required by audit) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- Metadata -->
-  <meta name="author" content="Franklin Rivas">
-  <meta name="description" content="Thank You page for Chamber Membership Application. Displays submitted form data and confirms successful application.">
-
-  <!-- Open Graph tags -->
-  <meta property="og:title" content="Thank You - Chamber of Commerce">
-  <meta property="og:description" content="Confirmation page showing submitted membership application details.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://frankjvip.github.io/wdd231/thankyou.html">
-  <meta property="og:image" content="https://frankjvip.github.io/wdd231/images/og-image.png">
-
-  <!-- Favicon -->
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-
-  <!-- Styles -->
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/large.css">
-
-  <!-- Scripts -->
-  <script src="scripts/date.js" defer></script>
-  <script src="scripts/thankyou.js" defer></script>
 </head>
 <body>
   <header>
-    <h1>Thank You</h1>
-    <nav>
-      <ul>
+    <nav class="navbar">
+      <div class="nav-left">
+        <a href="index.html">
+          <img src="images/logo.svg" alt="Site Logo" class="logo">
+        </a>
+        <span class="site-title">Santa Lucía Chamber of Commerce</span>
+      </div>
+      <button id="menuButton">☰</button>
+      <ul id="menu" class="hidden">
         <li><a href="index.html">Home</a></li>
         <li><a href="directory.html">Directory</a></li>
         <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section>
-      <h2>Your Membership Application</h2>
-      <!-- This container will be filled dynamically with form data -->
-      <div id="thankyouData"></div>
-    </section>
+    <h1>Thank You for Your Application!</h1>
+    <p>Here is the information you submitted:</p>
+
+    <ul>
+      <li><strong>First Name:</strong> <span id="fname"></span></li>
+      <li><strong>Last Name:</strong> <span id="lname"></span></li>
+      <li><strong>Title:</strong> <span id="title"></span></li>
+      <li><strong>Email:</strong> <span id="email"></span></li>
+      <li><strong>Phone:</strong> <span id="phone"></span></li>
+      <li><strong>Organization:</strong> <span id="org"></span></li>
+      <li><strong>Membership Level:</strong> <span id="membership"></span></li>
+      <li><strong>Description:</strong> <span id="desc"></span></li>
+      <li><strong>Timestamp:</strong> <span id="timestamp"></span></li>
+    </ul>
   </main>
 
   <footer>
@@ -58,6 +49,21 @@
     <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span></p>
   </footer>
 
-  
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("fname").textContent = params.get("fname");
+    document.getElementById("lname").textContent = params.get("lname");
+    document.getElementById("title").textContent = params.get("title");
+    document.getElementById("email").textContent = params.get("email");
+    document.getElementById("phone").textContent = params.get("phone");
+    document.getElementById("org").textContent = params.get("org");
+    document.getElementById("membership").textContent = params.get("membership");
+    document.getElementById("desc").textContent = params.get("desc");
+    document.getElementById("timestamp").textContent = params.get("timestamp");
+
+    // Footer dinámico
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
 </body>
 </html>

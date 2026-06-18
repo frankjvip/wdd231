@@ -1,32 +1,37 @@
-@media (min-width: 641px) and (max-width: 1024px) {
+@media (min-width: 48rem) {
+  /* Header - menú horizontal en tablets */
   nav ul {
-    flex-direction: row;
+    display: flex;
     justify-content: center;
-  }
-
-  header h1 {
-    font-size: 2rem;
-  }
-
-  .hero {
-    padding: 3rem;
-    font-size: 1.2rem;
-  }
-
-  /* Directory grid */
-  .directory {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
 
-  /* Join Page form */
-  form {
-    max-width: 600px;
-    margin: auto;
+  #menu.hidden {
+    display: flex !important; /* fuerza que se muestre en tablet */
   }
 
-  /* Discover Page grid */
+  #menuButton {
+    display: none; /* oculta el botón ☰ en tablet */
+  }
+
+  /* Directory Page - Grid en pantallas medianas */
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* Directory Page - List view en pantallas medianas */
+  .list .card {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  /* Join Page - Membership cards en pantallas medianas */
+  .membership-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Discover Page - Grid en pantallas medianas */
   #discover-grid {
     display: grid;
     grid-template-areas:
@@ -35,5 +40,19 @@
       "card5 card6"
       "card7 card8";
     gap: 1rem;
+  }
+
+  /* Hero section más grande en tablet */
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero img {
+    max-height: 450px;
+  }
+
+  /* Join Page - Form más ancho en tablet */
+  form {
+    max-width: 700px;
   }
 }
