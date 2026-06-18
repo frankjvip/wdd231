@@ -1,14 +1,13 @@
-// Fetch routines from local JSON (simulated here as array)
+// Rutinas dinámicas
 const routines = [
-  { name: "Resistance Band Rows", muscle: "Back", difficulty: "Easy", duration: "10 min" },
-  { name: "Push-ups", muscle: "Chest", difficulty: "Medium", duration: "8 min" },
-  { name: "Squats", muscle: "Legs", difficulty: "Medium", duration: "12 min" },
-  // ... add at least 15 routines total
+  { name: "Back & Biceps", muscle: "Back/Biceps", difficulty: "Medium", duration: "45 min" },
+  { name: "Chest & Triceps", muscle: "Chest/Triceps", difficulty: "Medium", duration: "40 min" },
+  { name: "Legs & Shoulders", muscle: "Legs/Shoulders", difficulty: "Hard", duration: "50 min" }
 ];
 
 const container = document.getElementById("routines-container");
 
-try {
+if (container) {
   routines.forEach(routine => {
     const card = document.createElement("div");
     card.classList.add("routine-card");
@@ -21,6 +20,4 @@ try {
     `;
     container.appendChild(card);
   });
-} catch (error) {
-  console.error("Error loading routines:", error);
 }

@@ -248,3 +248,18 @@ img {
     text-align: center;
   }
 }
+/* Dark Theme */
+.dark-theme {
+  background-color: #121212;
+  color: #f4f4f4;
+}
+
+.dark-theme header,
+.dark-theme footer {
+  background: #000;
+  color: #f4f4f4;
+}
+
+.dark-theme a {
+  color: #90ee90;
+}

@@ -1,27 +1,25 @@
-// Modal structure
-const modal = document.createElement("div");
-modal.id = "routine-modal";
-modal.classList.add("hidden");
-modal.innerHTML = `
-  <div class="modal-content">
-    <span id="close-modal">&times;</span>
-    <div id="modal-body"></div>
-  </div>
-`;
-document.body.appendChild(modal);
+// Modal
+const modal = document.getElementById("routine-modal");
 
-const closeModal = document.getElementById("close-modal");
-closeModal.addEventListener("click", () => {
-  modal.classList.add("hidden");
-});
-
-// Event delegation for routine details
+// Event delegation para botones Details
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("details-btn")) {
     const routineCard = e.target.closest(".routine-card");
     const routineName = routineCard.querySelector("h3").textContent;
     const routineDetails = routineCard.innerHTML;
-    document.getElementById("modal-body").innerHTML = routineDetails;
+
+    document.querySelector("#routine-modal .modal-content").innerHTML = `
+      <h3>${routineName}</h3>
+      ${routineDetails}
+      <button id="close-modal">Close</button>
+    `;
     modal.classList.remove("hidden");
+    modal.style.display = "flex";
+
+    // Botón de cierre
+    document.getElementById("close-modal").addEventListener("click", () => {
+      modal.classList.add("hidden");
+      modal.style.display = "none";
+    });
   }
 });

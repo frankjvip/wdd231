@@ -53,7 +53,7 @@
     <section class="hero">
       <h2>Health & Strength for Life</h2>
       <p>Discover practical fitness routines, nutrition tips, and motivation designed for adults over 40.</p>
-      <button>Start Your Journey</button>
+      <button id="cta-btn">Start Your Journey</button>
     </section>
 
     <!-- Intro Section -->
@@ -61,18 +61,57 @@
       <h2>Welcome to Strong After 40</h2>
       <p>Our mission is to inspire and guide people over 40 to stay active, healthy, and strong. Explore routines, lifestyle tips, and resources to support your journey.</p>
     </section>
+
+    <!-- Contact Form -->
+    <section class="form-section">
+      <h2>Contact Us</h2>
+      <form id="contact-form">
+        <label for="name">Name</label>
+        <input id="name" type="text" required>
+        <label for="email">Email</label>
+        <input id="email" type="email" required>
+        <button type="submit">Submit</button>
+      </form>
+      <div id="form-output"></div>
+    </section>
+
+    <!-- Example Routines with Details buttons -->
+    <section class="routines">
+      <h2>Fitness Routines</h2>
+      <div class="routine-card">
+        <h3>Back & Biceps</h3>
+        <p>Efficient workout for strength and hypertrophy.</p>
+        <button class="details-btn">Details</button>
+      </div>
+      <div class="routine-card">
+        <h3>Chest & Triceps</h3>
+        <p>Balanced push routine for upper body.</p>
+        <button class="details-btn">Details</button>
+      </div>
+    </section>
   </main>
+
+  <!-- Modal -->
+  <div id="routine-modal" class="hidden">
+    <div class="modal-content">
+      <h3>Routine Details</h3>
+      <p>Here you will find the details of the selected routine.</p>
+      <button id="close-modal">Close</button>
+    </div>
+  </div>
 
   <footer>
     <p>&copy; 2026 Strong After 40 | WDD 231 | Last Modified: <span id="lastModified"></span></p>
-    <a href="demo.html">Project Demo Video</a>
+    <a href="demo.mp4" target="_blank">Project Demo Video</a>
     <div class="social">
       <a href="#"><img src="images/facebook.webp" alt="Facebook"></a>
       <a href="#"><img src="images/tiktok.webp" alt="TikTok"></a>
       <a href="#"><img src="images/youtube.webp" alt="YouTube"></a>
     </div>
+    <a href="demo.html" class="btn-home">Home</a>
   </footer>
 
+  <script src="script.js"></script>
   <script>
     document.getElementById("lastModified").textContent = document.lastModified;
   </script>
