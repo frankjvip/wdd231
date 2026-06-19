@@ -29,11 +29,11 @@ nav {
 }
 
 #menu-button {
-  background: none;
+  background-color: #f4f4f9; /* contraste corregido */
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-  color: #fff;
+  color: #1b3c57; /* azul oscuro */
   display: block; /* visible en móvil */
 }
 
@@ -52,19 +52,19 @@ nav {
 
 #menu a {
   text-decoration: none;
-  color: #fff;
+  color: #fff; /* contraste corregido */
   font-weight: bold;
   padding: 8px 14px;
   border: 1px solid rgba(255,255,255,0.3);
   border-radius: 6px;
-  background: rgba(255,255,255,0.1);
+  background: #2a5d84; /* azul medio sólido */
   transition: background 0.3s ease, transform 0.2s ease;
   display: block; /* ocupa todo el ancho en móvil */
 }
 
 #menu a.active {
-  background: rgba(255,255,255,0.2);
-  color: #e67e22;
+  background: #1b3c57; /* azul oscuro sólido */
+  color: #e67e22; /* naranja */
 }
 
 #menu a:hover {
@@ -96,7 +96,7 @@ nav {
 }
 .hero button {
   background: #e67e22;
-  color: #fff;
+  color: #000; /* contraste corregido */
   border: none;
   padding: 12px 24px;
   border-radius: 6px;
@@ -194,13 +194,13 @@ footer .social img:hover {
 }
 
 footer a {
-  color: #e67e22;
+  color: #ffb347; /* naranja más claro */
   font-weight: bold;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 footer a:hover {
-  color: #e67e22;
+  color: #ffb347;
   text-decoration: underline;
 }
 
@@ -262,28 +262,4 @@ img {
 
 .dark-theme a {
   color: #90ee90;
-}
-/* Correcciones de contraste accesible */
-#menu-button {
-  color: #1b3c57; /* azul oscuro */
-  background-color: #f4f4f9; /* gris claro */
-}
-
-#menu a {
-  background: #2a5d84; /* azul medio */
-  color: #fff; /* blanco */
-}
-
-#menu a.active {
-  background: #1b3c57; /* azul oscuro sólido */
-  color: #e67e22; /* naranja */
-}
-
-#cta-btn {
-  background: #e67e22; /* naranja */
-  color: #000; /* negro para contraste */
-}
-
-footer a {
-  color: #ffb347; /* naranja más claro */
 }
