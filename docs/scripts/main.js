@@ -53,3 +53,8 @@ if (form) {
     `;
   });
 }
+// Mostrar fecha de última modificación
+const lastMod = document.getElementById("lastModified");
+if (lastMod) {
+  lastMod.textContent = document.lastModified;
+}
